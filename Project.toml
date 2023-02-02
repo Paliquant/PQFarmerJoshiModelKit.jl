@@ -1,0 +1,7 @@
+name = "PQFarmerJoshiModelKit"
+uuid = "407a78a1-e8d0-41ea-a29c-ea75088ba0a3"
+authors = ["Jeffrey Varner <jvarner@paliquant.com>"]
+version = "0.1.0"
+
+[deps]
+Distributions = "31c24e10-a181-5473-b8eb-7969acd0382f"
