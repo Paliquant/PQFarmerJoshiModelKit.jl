@@ -12,4 +12,6 @@ module PQFarmerJoshiModelKit
 
     # methods -
     export build
+    export play
+
 end # module PQFarmerJoshiModelKit

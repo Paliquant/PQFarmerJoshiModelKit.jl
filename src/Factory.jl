@@ -75,3 +75,38 @@ function build(game_model_type::Type{T},
     # return -
     return model
 end
+
+"""
+    build(type::Type{PQTrendFollowingTradingAgentModel}; 
+        tid::Int64 = 0, capital::Int64 = 100, timelag::Int64 = 0) -> PQTrendFollowingTradingAgentModel
+
+Builds a trend following agent of type `PQTrendFollowingTradingAgentModel`
+"""
+function build(type::Type{PQTrendFollowingTradingAgentModel}; 
+    tid::Int64 = 0, capital::Int64 = 100, timelag::Int64 = 0)::PQTrendFollowingTradingAgentModel
+
+    # build agent -
+    agent = PQTrendFollowingTradingAgentModel();
+    agent.tid = tid
+    agent.capital = capital
+    agent.timelag = timelag
+
+    # return -
+    return agent
+end
+
+function build(type::Type{PQValueInvestorTradingAgentModel};
+    tid::Int64 = 0, capital::Int64 = 100, value::Float64 = 100.0, μ::Float64 = 0.0, σ::Float64 = 1.0)::PQValueInvestorTradingAgentModel
+
+    # build agent -
+    agent = PQValueInvestorTradingAgentModel()
+    agent.tid = tid
+    agent.capital = capital
+    agent.value = value
+    agent.μ = μ
+    agent.σ = σ
+    agent.η = Normal(μ,σ)
+
+    # return -
+    return agent
+end
